@@ -44,6 +44,17 @@ Definição de Dados. São os comandos que interagem com os objetos do banco.
 
 São comandos DDL : 
 - CREATE
+
+```
+CREATE DATABASE secao03;
+
+CREATE TABLE tipos_produtos (
+	id SERIAL PRIMARY KEY,
+	DESCRICAO CHARACTER VARYING(50) NOT NULL
+);
+
+```
+
 - ALTER 
 - DROP
 

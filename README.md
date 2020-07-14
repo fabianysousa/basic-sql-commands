@@ -49,6 +49,16 @@ São comandos DDL :
 
 ### Exemplo
 
+```
+CREATE DATABASE secao03;
+
+CREATE TABLE tipos_produtos (
+	id SERIAL PRIMARY KEY,
+	DESCRICAO CHARACTER VARYING(50) NOT NULL
+);
+
+```
+
 ---
 
 ## 📌 DCL (Data Control Language)

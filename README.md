@@ -44,6 +44,10 @@ Definição de Dados. São os comandos que interagem com os objetos do banco.
 
 São comandos DDL : 
 - CREATE
+- ALTER 
+- DROP
+
+### Exemplo
 
 ```
 CREATE DATABASE secao03;
@@ -54,11 +58,6 @@ CREATE TABLE tipos_produtos (
 );
 
 ```
-
-- ALTER 
-- DROP
-
-### Exemplo
 
 ---
 

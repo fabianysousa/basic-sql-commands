@@ -18,6 +18,12 @@ São comandos DQL :
 
 ### Exemplo
 
+```
+SELECT * FROM tipos_produtos;
+
+SELECT p.id AS Código, p.descricao AS Descricao, p.preco AS Preço, p.id_tipo_produto AS Codigo_produto 
+FROM produtos AS p;
+```
 ---
 
 ## 📌 DML (Data Manipulation Language)
@@ -34,6 +40,17 @@ São comandos DML :
 
 ### Exemplo
 
+```
+INSERT INTO tipos_produtos (descricao) VALUES ('Computadores');
+```
+```
+DELETE FROM produtos WHERE id >= 3;
+DELETE FROM tipos_produtos WHERE id = 2;
+```
+```
+UPDATE tipos_produtos SET descricao = 'Nobreak' WHERE id = 2;
+UPDATE produtos SET descricao = 'Notebook',  preco = '2800' WHERE id = 2;
+```
 ---
 
 ## 📌 DDL (Data Definition Language)
@@ -56,9 +73,16 @@ CREATE TABLE tipos_produtos (
 	id SERIAL PRIMARY KEY,
 	DESCRICAO CHARACTER VARYING(50) NOT NULL
 );
-
 ```
+```
+ALTER TABLE tipos_produtos ADD peso DECIMAL(8,2);
+```
+```
+DROP TABLE produtos;
+DROP TABLE tipos_produtos;
 
+DROP DATABASE secao03;
+```
 ---
 
 ## 📌 DCL (Data Control Language)

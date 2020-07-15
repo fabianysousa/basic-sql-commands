@@ -1,5 +1,9 @@
 <h1 text align='center'> 🐘 Comandos básicos SQL 🐘 </h1>
 
+<div align="center">
+    <img https://ik.imagekit.io/fabianysousa/SQL-Server-DDL-DML-DCL-TCL_7w2814-DS.jpg">
+</div>
+
 ### 📑 Sobre
 
 Nesse repositório coloco em prática os comandos DQL, DML, DDL, DCL, DTL, utilizando o PostgreSQL.

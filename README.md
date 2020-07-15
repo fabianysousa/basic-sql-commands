@@ -48,11 +48,9 @@ São comandos DML :
 INSERT INTO tipos_produtos (descricao) VALUES ('Computadores');
 ```
 ```
-DELETE FROM produtos WHERE id >= 3;
 DELETE FROM tipos_produtos WHERE id = 2;
 ```
 ```
-UPDATE tipos_produtos SET descricao = 'Nobreak' WHERE id = 2;
 UPDATE produtos SET descricao = 'Notebook',  preco = '2800' WHERE id = 2;
 ```
 ---
@@ -73,6 +71,8 @@ São comandos DDL :
 ```
 CREATE DATABASE secao03;
 
+CREATE USER estagiario PASSWORD '123456';
+
 CREATE TABLE tipos_produtos (
 	id SERIAL PRIMARY KEY,
 	DESCRICAO CHARACTER VARYING(50) NOT NULL
@@ -82,10 +82,11 @@ CREATE TABLE tipos_produtos (
 ALTER TABLE tipos_produtos ADD peso DECIMAL(8,2);
 ```
 ```
-DROP TABLE produtos;
-DROP TABLE tipos_produtos;
-
 DROP DATABASE secao03;
+
+DROP USER estagiario;
+
+DROP TABLE produtos;
 ```
 ---
 
@@ -98,11 +99,19 @@ São os comandos para controlar a parte de segurança do banco de dados.
 São comandos DCL : 
 
 - GRANT 
-- REVOKE 
-- DENY
+- REVOKE
 
 ### Exemplo
 
+```
+GRANT ALL ON empresas TO estagiario;
+GRANT USAGE, SELECT ON SEQUENCE empresas_id_seq TO estagiario;
+GRANT SELECT ON empresas TO estagiario;
+```
+```
+REVOKE ALL ON empresas FROM estagiario;
+REVOKE USAGE, SELECT ON SEQUENCE empresas_id_seq FROM estagiario;
+```
 ---
 
 ## 📌 DTL (Data Transaction Language)
@@ -114,10 +123,26 @@ São os comandos para controle de transação.
 São comandos DTL : 
 
 - BEGIN TRANSACTION
-- COMMIT 
-- ROLLBACK
+- COMMIT TRANSACTION
+- ROLLBACK TRANSACTION
 
 ### Exemplo
 
+```
+BEGIN TRANSACTION;
+
+INSERT INTO tipos_produtos (descricao) VALUES ('Equipamentos');
+INSERT INTO tipos_produtos (descricao) VALUES ('Nobreak');
+
+COMMIT;
+```
+```
+BEGIN TRANSACTION;
+
+INSERT INTO tipos_produto (descricao) VALUES ('Tipo A');
+INSERT INTO tipos_produto (descricao) VALUES ('Tipo B');
+
+ROLLBACK;
+```
 ---
 Desenvolvido ❤️ por Fabiany de Sousa Costa

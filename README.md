@@ -6,7 +6,7 @@
 
 ### 📑 Sobre
 
-Nesse repositório coloco em prática os comandos DQL, DML, DDL, DCL, DTL, utilizando o PostgreSQL.
+Transact-SQL(T-SQL) é linguagem utilizada na construção de aplicações que manipulam dados, logo, compreender o seu  funcionamento pode ajudar a criar consultas melhores e pode facilitar a sua compreensão de como corrigir uma consulta que não está retornando os resultados desejados. Nesse repositório explico e exemplifico brevemente cada um dos comandos DQL, DML, DDL, DCL, DTL, utilizando o PostgreSQL.
 
 -----
 
